@@ -3,13 +3,12 @@
 print("\n***************************************\nCálculo de costo de envío de paquetes.\nDistancia estandar: 100 Km.\nPeso estandar: 30 kg\nPrecio: $ 5.000\n***************************************\n")
 
 #Ingreso de datos del paquete
-def nombre_usuario():
-    while True:
+while True:
         nombre = input("Ingrese usuario: ")
         if len(nombre) == 0: print("No ha puesto ningun usuario.") 
         elif len(nombre) > 30: print("excedió el límite de caracteres (30)\nVuelva a intentarlo. ")
         else: break
-nombre_usuario()
+
 
 def cantidad_peso():
     while True:
@@ -40,21 +39,13 @@ else: PF_km = 0
 CostoTotal = PF_kg + PF_km + costoBase
 
 #Mostrar costo de envío
-print(f"${CostoTotal:.0f}")
-
-"""
-○ Mostrar un desglose del costo de envío, incluyendo el nombre del cliente, el
-peso del paquete, la distancia de envío, el costo base, el adicional por peso,
-el recargo por distancia (si corresponde) y el costo total de envío, todo
-ordenado y bien presentado.
-"""
+print(f"Costo de envío:\n\nUsuario: {nombre}\nPeso final paquete: {pesototal} Kg.\nDistancia total: {kilometrototal} Km.\nCosto base de envío: $ {costoBase}\nCosto adicional de peso: ${PF_kg:.0f}\nCosto adicional de Kilometros: ${PF_km:.0f}\nCOSTO TOTAL: ${CostoTotal:.0f}")
 
 #Generar archivo de envío
-"""
- Crear un archivo de texto (.txt) con los datos del envío.
-○ El archivo generado debe incluir el nombre del cliente, el peso del paquete, la
-distancia de envío y el costo total de envío, todo de forma ordenada y bien
-presentada.
-○ El nombre del archivo generado debe seguir el formato
-"envio_[nombre_cliente].txt".
-"""
+import os
+archivo = "Costos_de_Envio.txt"
+
+with open(archivo, "w")as ruta:
+    ruta.write(f"Costo de envio:\n\nUsuario: {nombre}\nPeso final paquete: {pesototal} Kg.\nDistancia total: {kilometrototal} Km.\nCosto base de envio: $ {costoBase}\nCosto adicional de peso: ${PF_kg:.0f}\nCosto adicional de Kilometros: ${PF_km:.0f}\nCOSTO TOTAL: ${CostoTotal:.0f}")
+
+    print("\nSe ha creado un archivo .txt con los datos entregados.")
