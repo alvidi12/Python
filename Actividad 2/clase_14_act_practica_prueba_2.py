@@ -36,6 +36,7 @@ else: PF_kg = 0
 
 if kilometrototal > 100: PF_km = (kilometrototal - 100)*exceso_Km + costoBase
 else: PF_km = 0
+
 CostoTotal = PF_kg + PF_km + costoBase
 
 #Mostrar costo de envío
