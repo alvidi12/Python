@@ -71,3 +71,48 @@ for fila in leer_archivo_csv('ejemplo.csv'):
 
 #Mostrar y leer el archivo json
 print(json.dumps(leer_archivo_json('ejemplo.json'), indent=4))
+
+contenido_adicional_txt = "\nEste es contenido adicional"
+agregar_contenido_txt('ejemplo.txt', contenido_txt)
+
+print(leer_archivo_txt('ejemplo.txt'))
+
+#Métodos adicionales para leer archivos.
+with open("ejemplo.txt", "r") as fichero:
+    print("\nContenido leído como read()")
+    print(fichero.read())
+
+#Leer archivo línea por línea
+with open('ejemplo.txt', 'r') as fichero:
+    linea = fichero.readline()
+    while linea != "":
+        print(linea, end='')
+        linea = fichero.readline()
+    
+#Redline()
+with open('ejemplo.txt', 'r') as fichero:
+    print("redline()")
+    for linea in fichero.readline():
+        print(linea, end="")
+
+#Escribir un archivo usando write()
+lista = ["Manzanita\n", "Perita\n", "Platanito\n"]
+with open('datos_guardados.txt', 'w') as fichero:
+    fichero.writelines(lista)
+
+#Comunicación entre 2 funciones usando archivos
+def escribe_fichero(mensaje):
+    with open('fichero_comunicacion.txt', 'w') as fichero:
+        fichero.write(mensaje)
+
+#función para leer fichero
+def lee_fichero():
+    with open('fichero_comunicacion.txt', 'r') as fichero:
+        mensaje = fichero.read()
+        with open('fichero_comunicacion.txt', 'w') as fichero:
+            fichero.write('')
+            return mensaje
+
+escribe_fichero("Este es un mensaje para el fichero")
+print("\nMensaje leído del fichero de comunicación")
+print(lee_fichero())

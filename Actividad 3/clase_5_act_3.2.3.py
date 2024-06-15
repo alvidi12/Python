@@ -1,5 +1,5 @@
 """
-Creen un programa que solicite a los usuarios ingresar un texto. Luego, el programa debe analizar el texto y mostrar la frecuencia de cada palabra. Utilicen un diccionario para alma-cenar las palabras como claves y la frecuencia como valores.
+Creen un programa que solicite a los usuarios ingresar un texto. Luego, el programa debe analizar el texto y mostrar la frecuencia de cada palabra. Utilicen un diccionario para almacenar las palabras como claves y la frecuencia como valores.
 """
 # Ejercicio 1: Frecuencia de Palabras en un Texto
 texto = input("Ingrese un texto: ")

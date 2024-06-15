@@ -1,9 +1,0 @@
-Costo de envio:
-
-Usuario: dsfsdf
-Peso final paquete: 45.0 Kg.
-Distancia total: 45.0 Km.
-Costo base de envio: $ 5000
-Costo adicional de peso: $12500
-Costo adicional de Kilometros: $0
-COSTO TOTAL: $17500

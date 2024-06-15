@@ -1,0 +1,2 @@
+Estas cookies son necesarias para proporcionar funcionalidades básicas mientras navega por los sitios web IBM. 
+Estas capacidades incluyen preferencias de cookies, equilibrio de carga, administración de sesiones, selección de idioma y proceso de pago
